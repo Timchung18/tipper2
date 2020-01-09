@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var billField: UITextField!
-    //@IBOutlet weak var tipField: UITextField!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
@@ -59,7 +58,6 @@ class ViewController: UIViewController {
 
 
     @IBAction func onTap(_ sender: Any) {
-        //print("Hello")
         view.endEditing(true)
     }
 

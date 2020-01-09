@@ -15,22 +15,10 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func setDefaultTip(_ sender: Any) {
         let defaults = UserDefaults.standard
-        /*if defaultControls.selectedSegmentIndex == 0{
-            defaults.set(0.15, forKey: "15%")
-        } else if defaultControls.selectedSegmentIndex == 1{
-            defaults.set(0.18, forKey: "18%")
-        } else if defaultControls.selectedSegmentIndex == 2{
-            defaults.set(0.2, forKey: "20%")
-        }*/
-        /*
-        defaults.set(0.15, forKey: "15%")
-        defaults.set(0.18, forKey: "18%")
-        defaults.set(0.2, forKey: "20%")*/
         if defaultControls.selectedSegmentIndex == 0{
             defaults.set(0.15, forKey: "percent")
         } else if defaultControls.selectedSegmentIndex == 1{
