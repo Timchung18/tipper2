@@ -15,21 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     
-    //@IBOutlet weak var timeLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         billField.text = "$0.00"
         let defaults = UserDefaults.standard
-        /*billField.text = String(defaults.double(forKey: "currentBill"))
-        calculateTip(1)
-        let other = defaults.object(forKey: "time") ?? NSDate.init()
-        let start = NSDate.init()
-        let interv = start.timeIntervalSince(other as! Date)
-        defaults.set(start, forKey: "time")
-        print(interv)
-        timeLabel.text = String(interv)
-        */
         let other = defaults.object(forKey: "time") ?? NSDate.init()
         let start = NSDate.init()
         let interv = start.timeIntervalSince(other as! Date)
@@ -40,7 +29,6 @@ class ViewController: UIViewController {
             defaults.set(0.0, forKey: "currentBill")
         }
         defaults.set(start, forKey: "time")
-        //print(start.description)
     }
     
     override func viewWillAppear(_ animated: Bool) {
