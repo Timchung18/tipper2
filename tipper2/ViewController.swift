@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         let other = defaults.object(forKey: "time") ?? NSDate.init()
         let start = NSDate.init()
         let interv = start.timeIntervalSince(other as! Date)
-        if interv < 3600{
+        if interv < 600{
             billField.text = String(defaults.double(forKey: "currentBill"))
             calculateTip(1)
         }else{
